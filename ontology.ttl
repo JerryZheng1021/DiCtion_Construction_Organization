@@ -1,0 +1,211 @@
+@prefix : <http://bim.aalto.fi/DiCtion/Ontology/ConstructionOrganization#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://bim.aalto.fi/DiCtion/Ontology/ConstructionOrganization> .
+
+<http://bim.aalto.fi/DiCtion/Ontology/ConstructionOrganization> rdf:type owl:Ontology ;
+                                                                 owl:versionIRI <http://bim.aalto.fi/DiCtion/Ontology/ConstructionOrganization/0.8> ;
+                                                                 owl:imports <http://promsns.org/def/agr/1.3> ;
+                                                                 rdfs:comment "This Construction Organization ontology is known as one module of SSP ontology of DiCtion project. The purpose of this module is to support data sharing of the organization and business information that related to the construction project. This module can be used in organization-related information management use cases."@en ;
+                                                                 owl:versionInfo 0.8 .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://bim.aalto.fi/DiCtion/Ontology/dependsOn
+<http://bim.aalto.fi/DiCtion/Ontology/dependsOn> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Obligation> ;
+                                                 rdfs:range <http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/fulfilObligation
+<http://bim.aalto.fi/DiCtion/Ontology/fulfilObligation> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Actor> ;
+                                                        rdfs:range <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/hasObject
+<http://bim.aalto.fi/DiCtion/Ontology/hasObject> rdf:type owl:ObjectProperty .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/isPromiseeof
+<http://bim.aalto.fi/DiCtion/Ontology/isPromiseeof> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Actor> ;
+                                                    rdfs:range <http://bim.aalto.fi/DiCtion/Ontology/Contract> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/isPromisorof
+<http://bim.aalto.fi/DiCtion/Ontology/isPromisorof> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Actor> ;
+                                                    rdfs:range <http://bim.aalto.fi/DiCtion/Ontology/Contract> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/isResponsibleFor
+<http://bim.aalto.fi/DiCtion/Ontology/isResponsibleFor> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Actor> ;
+                                                        rdfs:range <http://bim.aalto.fi/DiCtion/Ontology/Activity> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/receiveObligation
+<http://bim.aalto.fi/DiCtion/Ontology/receiveObligation> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Actor> ;
+                                                         rdfs:range <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/restricts
+<http://bim.aalto.fi/DiCtion/Ontology/restricts> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint> ;
+                                                 rdfs:range <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Activity
+<http://bim.aalto.fi/DiCtion/Ontology/Activity> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Actor
+<http://bim.aalto.fi/DiCtion/Ontology/Actor> rdf:type owl:Class ;
+                                             owl:equivalentClass <http://www.w3.org/ns/prov#Agent> ,
+                                                                 <http://xmlns.com/foaf/0.1/Agent> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/isResponsibleFor> ;
+                                                                   owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Activity>
+                                                                 ] ;
+                                             rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/Resource> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/fulfilObligation> ;
+                                                               owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Obligation>
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/isPromiseeof> ;
+                                                               owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Contract>
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/isPromisorof> ;
+                                                               owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Contract>
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/receiveObligation> ;
+                                                               owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Obligation>
+                                                             ] .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Company
+<http://bim.aalto.fi/DiCtion/Ontology/Company> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/Organization> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Contract
+<http://bim.aalto.fi/DiCtion/Ontology/Contract> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://promsns.org/def/agr#Agreement> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Delivery
+<http://bim.aalto.fi/DiCtion/Ontology/Delivery> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/Obligation> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/hasObject> ;
+                                                                  owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/DomainObject>
+                                                                ] ;
+                                                owl:disjointWith <http://bim.aalto.fi/DiCtion/Ontology/Payment> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint
+<http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint> rdf:type owl:Class ;
+                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/restricts> ;
+                                                                              owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Obligation>
+                                                                            ] .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/DomainObject
+<http://bim.aalto.fi/DiCtion/Ontology/DomainObject> rdf:type owl:Class ;
+                                                    owl:disjointWith <http://promsns.org/def/agr#Agreement> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/DueDate
+<http://bim.aalto.fi/DiCtion/Ontology/DueDate> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint> ;
+                                               owl:disjointWith <http://bim.aalto.fi/DiCtion/Ontology/LeadTime> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/LeadTime
+<http://bim.aalto.fi/DiCtion/Ontology/LeadTime> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Obligation
+<http://bim.aalto.fi/DiCtion/Ontology/Obligation> rdf:type owl:Class ;
+                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/dependsOn> ;
+                                                                    owl:allValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint>
+                                                                  ] .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Organization
+<http://bim.aalto.fi/DiCtion/Ontology/Organization> rdf:type owl:Class ;
+                                                    owl:equivalentClass <http://www.w3.org/ns/org#Organization> ;
+                                                    rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/Actor> ;
+                                                    owl:disjointWith <http://bim.aalto.fi/DiCtion/Ontology/Person> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Payment
+<http://bim.aalto.fi/DiCtion/Ontology/Payment> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Person
+<http://bim.aalto.fi/DiCtion/Ontology/Person> rdf:type owl:Class ;
+                                              owl:equivalentClass <http://xmlns.com/foaf/0.1/Person> ;
+                                              rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/Actor> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Resource
+<http://bim.aalto.fi/DiCtion/Ontology/Resource> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
+
+
+###  http://promsns.org/def/agr#Agreement
+<http://promsns.org/def/agr#Agreement> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
+                                  owl:equivalentClass <http://xmlns.com/foaf/0.1/Agent> .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://bim.aalto.fi/DiCtion/Ontology/Actor>
+                <http://bim.aalto.fi/DiCtion/Ontology/Contract>
+                <http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint>
+                <http://bim.aalto.fi/DiCtion/Ontology/Obligation>
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

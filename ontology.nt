@@ -1,0 +1,196 @@
+<http://bim.aalto.fi/DiCtion/Ontology/ConstructionOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://bim.aalto.fi/DiCtion/Ontology/ConstructionOrganization> <http://www.w3.org/2002/07/owl#versionIRI> <http://bim.aalto.fi/DiCtion/Ontology/ConstructionOrganization/0.8> .
+<http://bim.aalto.fi/DiCtion/Ontology/ConstructionOrganization> <http://www.w3.org/2002/07/owl#imports> <http://promsns.org/def/agr/1.3> .
+<http://bim.aalto.fi/DiCtion/Ontology/ConstructionOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "This Construction Organization ontology is known as one module of SSP ontology of DiCtion project. The purpose of this module is to support data sharing of the organization and business information that related to the construction project. This module can be used in organization-related information management use cases."@en .
+<http://bim.aalto.fi/DiCtion/Ontology/ConstructionOrganization> <http://www.w3.org/2002/07/owl#versionInfo> "0.8"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/dependsOn
+<http://bim.aalto.fi/DiCtion/Ontology/dependsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bim.aalto.fi/DiCtion/Ontology/dependsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+<http://bim.aalto.fi/DiCtion/Ontology/dependsOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/fulfilObligation
+<http://bim.aalto.fi/DiCtion/Ontology/fulfilObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bim.aalto.fi/DiCtion/Ontology/fulfilObligation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/Actor> .
+<http://bim.aalto.fi/DiCtion/Ontology/fulfilObligation> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/hasObject
+<http://bim.aalto.fi/DiCtion/Ontology/hasObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/isPromiseeof
+<http://bim.aalto.fi/DiCtion/Ontology/isPromiseeof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bim.aalto.fi/DiCtion/Ontology/isPromiseeof> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/Actor> .
+<http://bim.aalto.fi/DiCtion/Ontology/isPromiseeof> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/Contract> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/isPromisorof
+<http://bim.aalto.fi/DiCtion/Ontology/isPromisorof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bim.aalto.fi/DiCtion/Ontology/isPromisorof> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/Actor> .
+<http://bim.aalto.fi/DiCtion/Ontology/isPromisorof> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/Contract> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/isResponsibleFor
+<http://bim.aalto.fi/DiCtion/Ontology/isResponsibleFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bim.aalto.fi/DiCtion/Ontology/isResponsibleFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/Actor> .
+<http://bim.aalto.fi/DiCtion/Ontology/isResponsibleFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/Activity> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/receiveObligation
+<http://bim.aalto.fi/DiCtion/Ontology/receiveObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bim.aalto.fi/DiCtion/Ontology/receiveObligation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/Actor> .
+<http://bim.aalto.fi/DiCtion/Ontology/receiveObligation> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/restricts
+<http://bim.aalto.fi/DiCtion/Ontology/restricts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bim.aalto.fi/DiCtion/Ontology/restricts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint> .
+<http://bim.aalto.fi/DiCtion/Ontology/restricts> <http://www.w3.org/2000/01/rdf-schema#range> <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/Activity
+<http://bim.aalto.fi/DiCtion/Ontology/Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/Actor
+<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/ns/prov#Agent> .
+<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Agent> .
+<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://bim.aalto.fi/DiCtion/Ontology/isResponsibleFor> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bim.aalto.fi/DiCtion/Ontology/Activity> .
+<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/Resource> .
+<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://bim.aalto.fi/DiCtion/Ontology/fulfilObligation> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://bim.aalto.fi/DiCtion/Ontology/isPromiseeof> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bim.aalto.fi/DiCtion/Ontology/Contract> .
+<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://bim.aalto.fi/DiCtion/Ontology/isPromisorof> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bim.aalto.fi/DiCtion/Ontology/Contract> .
+<http://bim.aalto.fi/DiCtion/Ontology/Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://bim.aalto.fi/DiCtion/Ontology/receiveObligation> .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/Company
+<http://bim.aalto.fi/DiCtion/Ontology/Company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/Company> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/Organization> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/Contract
+<http://bim.aalto.fi/DiCtion/Ontology/Contract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/Contract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://promsns.org/def/agr#Agreement> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/Delivery
+<http://bim.aalto.fi/DiCtion/Ontology/Delivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/Delivery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+<http://bim.aalto.fi/DiCtion/Ontology/Delivery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://bim.aalto.fi/DiCtion/Ontology/hasObject> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
+<http://bim.aalto.fi/DiCtion/Ontology/Delivery> <http://www.w3.org/2002/07/owl#disjointWith> <http://bim.aalto.fi/DiCtion/Ontology/Payment> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint
+<http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://bim.aalto.fi/DiCtion/Ontology/restricts> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/DomainObject
+<http://bim.aalto.fi/DiCtion/Ontology/DomainObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/DomainObject> <http://www.w3.org/2002/07/owl#disjointWith> <http://promsns.org/def/agr#Agreement> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/DueDate
+<http://bim.aalto.fi/DiCtion/Ontology/DueDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/DueDate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint> .
+<http://bim.aalto.fi/DiCtion/Ontology/DueDate> <http://www.w3.org/2002/07/owl#disjointWith> <http://bim.aalto.fi/DiCtion/Ontology/LeadTime> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/LeadTime
+<http://bim.aalto.fi/DiCtion/Ontology/LeadTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/LeadTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/Obligation
+<http://bim.aalto.fi/DiCtion/Ontology/Obligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/Obligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://bim.aalto.fi/DiCtion/Ontology/dependsOn> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/Organization
+<http://bim.aalto.fi/DiCtion/Ontology/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/Organization> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/ns/org#Organization> .
+<http://bim.aalto.fi/DiCtion/Ontology/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/Actor> .
+<http://bim.aalto.fi/DiCtion/Ontology/Organization> <http://www.w3.org/2002/07/owl#disjointWith> <http://bim.aalto.fi/DiCtion/Ontology/Person> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/Payment
+<http://bim.aalto.fi/DiCtion/Ontology/Payment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/Payment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/Person
+<http://bim.aalto.fi/DiCtion/Ontology/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/Person> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Person> .
+<http://bim.aalto.fi/DiCtion/Ontology/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/Actor> .
+# 
+# http://bim.aalto.fi/DiCtion/Ontology/Resource
+<http://bim.aalto.fi/DiCtion/Ontology/Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bim.aalto.fi/DiCtion/Ontology/Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
+# 
+# http://promsns.org/def/agr#Agreement
+<http://promsns.org/def/agr#Agreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Agent> .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid9 <http://www.w3.org/2002/07/owl#members> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bim.aalto.fi/DiCtion/Ontology/Actor> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bim.aalto.fi/DiCtion/Ontology/Contract> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bim.aalto.fi/DiCtion/Ontology/Obligation> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

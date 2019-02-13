@@ -1,0 +1,307 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/isResponsibleFor"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Activity"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/fulfilObligation"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Obligation"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/isPromiseeof"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Contract"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/isPromisorof"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Contract"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/receiveObligation"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Obligation"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasObject"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/restricts"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Obligation"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/dependsOn"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Actor"
+    }, {
+      "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Contract"
+    }, {
+      "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint"
+    }, {
+      "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Obligation"
+    } ]
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Activity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Actor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Resource"
+  }, {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Agent"
+  }, {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  }, {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Company",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Organization"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionOrganization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This Construction Organization ontology is known as one module of SSP ontology of DiCtion project. The purpose of this module is to support data sharing of the organization and business information that related to the construction project. This module can be used in organization-related information management use cases."
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://promsns.org/def/agr/1.3"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionOrganization/0.8"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.8"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Contract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://promsns.org/def/agr#Agreement"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Delivery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Obligation"
+  }, {
+    "@id" : "_:genid6"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Payment"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid7"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://promsns.org/def/agr#Agreement"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DueDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/LeadTime"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/LeadTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Obligation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid8"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Actor"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Person"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.w3.org/ns/org#Organization"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Payment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Obligation"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Actor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Resource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/dependsOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Obligation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/fulfilObligation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Obligation"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/hasObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/isPromiseeof",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Contract"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/isPromisorof",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Contract"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/isResponsibleFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Activity"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/receiveObligation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Obligation"
+  } ]
+}, {
+  "@id" : "http://bim.aalto.fi/DiCtion/Ontology/restricts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/DependencyConstraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bim.aalto.fi/DiCtion/Ontology/Obligation"
+  } ]
+}, {
+  "@id" : "http://promsns.org/def/agr#Agreement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/org#Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ]
+} ]
