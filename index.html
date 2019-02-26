@@ -45,9 +45,9 @@ function loadTOC(){
  $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
  };    $(function(){
-      $("#abstract").load("DiCtion_Construction_Organization/sections/abstract-en.html"); 
-      $("#overview").load("DiCtion_Construction_Organization/sections/overview-en.html"); 
-      $("#crossref").load("DiCtion_Construction_Organization/sections/crossref-en.html", null, loadHash); 
+      $("#abstract").load("../sections/abstract-en.html"); 
+      $("#overview").load("../sections/overview-en.html"); 
+      $("#crossref").load("../sections/crossref-en.html", null, loadHash); 
     });
     </script> 
   </head> 
